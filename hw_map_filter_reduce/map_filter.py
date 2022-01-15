@@ -6,12 +6,12 @@
 
 Приклад:
 >>> format_names([" joHn    DOE  ", " BRIan    smiTh  "])
-["John Doe", "Brian Smith"]
+['John Doe', 'Brian Smith']
 """
 
 
-def format_names(names: list[str]) -> list[str]:
-    return list(map(lambda name: " ".join(filter(lambda i: i, name.strip().title().split())), names))
+def format_names(names):
+    return list(map(lambda name: " ".join(filter(lambda i: i, name.strip().title().split(" "))), names))
 
 
 print(format_names([" joHn     DOE  ", " BRIan     smiTh  "]))
